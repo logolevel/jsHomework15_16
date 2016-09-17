@@ -1,10 +1,11 @@
-
 $(function() {
-//google api key
-// AIzaSyCBt-JVUE0GMXq95OI8zUW43kh0GUzlAM4
+/*
+google api key
+AIzaSyCBt-JVUE0GMXq95OI8zUW43kh0GUzlAM4
 
-//pixabay api key
-//3324605-cd4276f44c6c24381ca9603e8
+pixabay api key
+3324605-cd4276f44c6c24381ca9603e8
+*/
 
 /*variables*/
 var imgTag;
@@ -30,30 +31,35 @@ function imgSearch(imgTag) {
 	        	$('.content').append('<a class="img_link" href="'+ pageUrl +'"><img src="'
 	        		+ imgUrl +'"><span>'+ imgWidth +' x '+ imgHeight +'<span></a>');
 	       	});
-	    else
-	    		$('.content').append('<p>Моя твоя не понимать...</p>');
-	        console.log('No hits');
+	    else 
+	    	/*if value not found*/
+	    		$('.content').append('<p>Спробуй ще...</p>');
 	});
 
 	return;
 
 }
+/*function - get input value
+and transfer to imgSearch function*/
+function contentOutput() {
+	imgTag = $('#img_tag').val();
+	imgSearch(imgTag);
+}
 
 /*event search press button*/
 $('#btn_search').on('click', function() {
-	imgTag = $('#img_tag').val();
-	console.log(imgTag);
-	imgSearch(imgTag);
+	contentOutput()
 });
+
 /*event search press enter*/
 $('#img_tag').keypress(function(e) {
+/*if pressed enter*/
     if(e.which == 13) {
-			imgTag = $('#img_tag').val();
-			console.log(imgTag);
-			imgSearch(imgTag);
+    	contentOutput()
     }
 });
 
 
+/*end jQuery*/
 });
 

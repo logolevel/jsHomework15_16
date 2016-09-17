@@ -1,6 +1,6 @@
 # jsHomework15_16
-Pixabay API
-<p><a href="https://logolevel.github.io/projects/pixabay_api/index.html">Live DEMO</a></p>
+Pixabay API -
+<a href="https://logolevel.github.io/projects/pixabay_api/index.html">Live DEMO</a>
 <p>Task: https://github.com/goit-fe/markup_fe2o/tree/master/js_15-16</p>
 <ol>
 <li>Сделать форму поиска как на <code>google.com</code> - должно быть поле для ввода запроса, и кнопка отправить. Так же отправка поискового запроса должна осуществляться по нажатию кнопки <code>Enter</code></li>

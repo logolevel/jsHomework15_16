@@ -12,6 +12,7 @@ var imgTag;
 var API_KEY = '3324605-cd4276f44c6c24381ca9603e8';
 var URL;
 
+
 /*search function*/
 function imgSearch(imgTag) {
 /*delete result for new search*/
@@ -106,8 +107,8 @@ function Student() {
 }
 
 /*check work prototype*/
-console.log('"worket1" took field "name" from "Human": ',worker1.name);
-console.log('"worket2" took field "age" from "Human": ',worker2.age);
+console.log('"worker1" took field "name" from "Human": ',worker1.name);
+console.log('"worker2" took field "age" from "Human": ',worker2.age);
 console.log('"student1" took field "gender" from "Human": ',student1.gender);
 console.log('"student2" took field "weight" from "Human": ',student2.weight);
 

@@ -63,3 +63,52 @@ $('#img_tag').keypress(function(e) {
 /*end jQuery*/
 });
 
+
+/*
+Part 2 of task
+prototype inheritance
+*/
+
+/*constructor Human*/
+function Human() {
+	this.name 	= 'Vasya',
+	this.age 		= '18',
+	this.gender = 'male',
+	this.weight = '90kg'
+}
+/*instance of the class Human*/
+var human = new Human();
+
+/*constructor Worker*/
+function Worker() {
+	this.job 		= 'GoIT',
+	this.salary = '400$',
+	this.work 	= function() {
+		alert('Working...');
+	}
+}
+/*prototype*/
+Worker.prototype = human;
+Student.prototype = human;
+/*instance of the class Worker and Student*/
+var worker1  = new Worker();
+var worker2  = new Worker();
+var student1 = new Student();
+var student2 = new Student();
+
+/*constructor Student*/
+function Student() {
+	this.study 	= 'DonNTU',
+	this.salary = '800грн',
+	this.work 	= function() {
+		alert('Looks series 0_0');
+	}
+}
+
+/*check work prototype*/
+console.log('"worket1" took field "name" from "Human": ',worker1.name);
+console.log('"worket2" took field "age" from "Human": ',worker2.age);
+console.log('"student1" took field "gender" from "Human": ',student1.gender);
+console.log('"student2" took field "weight" from "Human": ',student2.weight);
+
+

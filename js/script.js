@@ -48,7 +48,8 @@ function contentOutput() {
 }
 
 /*event search press button*/
-$('#btn_search').on('click', function() {
+$('#btn_search').on('click', function(e) {
+	e.preventDefault();
 	contentOutput()
 });
 
@@ -56,6 +57,7 @@ $('#btn_search').on('click', function() {
 $('#img_tag').keypress(function(e) {
 /*if pressed enter*/
     if(e.which == 13) {
+    	e.preventDefault();
     	contentOutput()
     }
 });
